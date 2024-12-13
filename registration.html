@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration</title>
+    </head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Permanent+Marker&display=swap');
+
+    @media (min-width:320px) {    
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+         h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 32px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 200px;
+            height: 550px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        input::placeholder {
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            color: rgb(119, 47, 58);
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        #gender-label {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(119, 47, 58);
+            font-size: 14px;
+            
+        }
+
+        button {
+            border-style: none;
+            border-radius: 20px;
+            padding: 12px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 10px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 10px;
+            color: rgb(119, 47, 58);
+            margin-left: 12px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+    }    
+
+        @media (min-width: 1024px) {
+            * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+         h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 52px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 500px;
+            height: 650px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 18px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        input::placeholder {
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            font-size: 18px;
+            color: rgb(119, 47, 58);
+            padding: 16px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        #gender-label {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(119, 47, 58);
+            font-size: 18px;
+            
+        }
+
+        button {
+            border-style: none;
+            border-radius: 20px;
+            padding: 16px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 16px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 15px;
+            color: rgb(119, 47, 58);
+            margin-left: 12px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+        }
+
+        @media (min-width:2560px) {
+            * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+         h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 84px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 1000px;
+            height: 1050px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 5px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 40px;
+            padding: 40px;
+            margin-bottom: 8px;
+            border: 2px solid white;
+            box-shadow: inset 0 0 5px 4px rgba(0, 0, 0, 0.350);
+            
+        }
+
+        input::placeholder {
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 24px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        select {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 40px;
+            font-size: 18px;
+            color: rgb(119, 47, 58);
+            padding: 30px;
+            margin-bottom: 8px;
+            border: 3px solid rgba(255, 255, 255, 0.836);
+            box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        #gender-label {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(119, 47, 58);
+            font-size: 24px;
+            
+        }
+
+        button {
+            border-style: none;
+            border-radius: 30px;
+            padding: 30px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+            font-size: 24px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 31px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 25px;
+            color: rgb(119, 47, 58);
+            margin-left: 12px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+        }
+    </style>
+
+        <body>
+            <div class="container">
+                
+            <form autocomplete="off" method="POST" action="registration.php" id="form">
+                <h1>Register</h1>
+                <input type="text" name="student_id" placeholder="Student ID Number">
+                <input type="text" name="full_name" placeholder="Full Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="phone_number" placeholder="Phone Number"> <br>
+                <label id="gender-label" for="dropdown">Gender</label>
+                    <select id="dropdown" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select> <br>
+                <input type="text" name="course" placeholder="Course">
+                <input type="password" name="password" placeholder="Password"> <br>
+                <button type="submit" name="submit">Submit</button>    
+
+                <p id="acc">Already have an account? <a href="login.html">Sign in</a></p>
+            </form>
+            </div>
+        </body>
+</html>

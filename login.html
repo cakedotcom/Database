@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Permanent+Marker&display=swap');
+
+            @media (min-width: 320px) {
+
+                * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 200px;
+            height: 400px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+
+
+        input::placeholder {
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border-style: none;
+            border-radius: 20px;
+            padding: 15px 80px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 16px 81px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 10px;
+            margin-top: 10px;
+            color: rgb(119, 47, 58);
+            margin-left: 5px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+
+            }
+
+            @media (min-width: 1440px) {
+                * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 42px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 300px;
+            height: 400px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 15px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+
+
+        input::placeholder {
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border-style: none;
+            border-radius: 20px;
+            padding: 15px 80px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 16px 81px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 14px;
+            margin-top: 10px;
+            color: rgb(119, 47, 58);
+            margin-left: 5px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+            }
+
+            @media (min-width: 2560px) {
+                * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url("flowerbg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: Monoton, sans-serif;
+            display: flex;
+            justify-content: center;
+            font-weight: 400;
+            margin-bottom: 20px;
+            font-size: 100px;
+            color: rgb(119, 47, 58);
+
+        }
+
+        .container #form {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 25px;
+            width: 800px;
+            height: 800px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba(245, 245, 245, 0.651);
+            box-shadow: 0 0 2px 5px hsla(0, 0%, 0%, 0.250);
+            justify-content: center;
+            align-items: center;
+        }
+
+        #form input {
+            border-style: none;
+            background-color: transparent;
+            border-radius: 50px;
+            padding: 30px 100px;
+            margin-bottom: 8px;
+            border: 1px solid white;
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            
+        }
+
+
+        input::placeholder {
+            display: flex;
+            color: rgb(119, 47, 58);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 28px;
+            justify-content: flex-start;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            border-style: none;
+            border-radius: 50px;
+            padding: 30px 150px;
+            background: linear-gradient(to right, #EE9CA7, #FFDDE1);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            color: rgb(119, 47, 58);
+            box-shadow: inset 0 0 3px 2px rgba(0, 0, 0, 0.3);
+            transition: 0.2s;
+            font-size: 24px;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #fa8796, #FFDDE1);
+            transform: scale(1.1);
+            padding: 31px 151px;
+        }
+
+        #acc {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            justify-content: center;
+            font-size: 28px;
+            margin-top: 30px;
+            color: rgb(119, 47, 58);
+            margin-left: 5px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: rgb(119, 47, 58);
+
+        }
+            }
+        </style>
+    </head>
+        <body>
+           <div class="container"> 
+            <form autocomplete="off" id="form" action="login.php" method="post">
+                <h1>Blossom</h1>
+                <input type="email" id="student_id" name="email" placeholder="Email" required/><br><br>
+        
+                <input type="password" id="password" name="password" placeholder="Password" required/><br><br>
+        
+                <button type="submit">Login</button>
+
+                <p id="acc">Don't have an account? <a href="registration.html">Register</a></p>
+            </form>
+           </div> 
+        </body>
+</html>
